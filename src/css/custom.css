@@ -1,0 +1,221 @@
+.porto-big-title-new{
+    letter-spacing: -22px;
+    font-size: 2rem;
+    font-size: 8rem;
+    line-height: 0.8;
+}
+
+
+/*
+* Diamonds
+*/
+.diamonds {
+    font-size: 0;
+    margin: 40px auto 85px;
+    position: relative;
+    text-align: center;
+    padding: 50px 0 0 57px;
+}
+
+.diamonds > li {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 135px;
+}
+
+.diamonds .diamond {
+    background: transparent;
+    display: block;
+    height: 243px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    width: 245px;
+    overflow: hidden;
+    transform: rotate(-45deg);
+}
+
+.diamonds .diamond:after {
+    transition: all 0.2s ease;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 100;
+}
+
+.diamonds .diamond:before {
+    transition: all 0.2s ease;
+    color: #fff;
+    content: "\e091";
+    font-family: "simple-line-icons";
+    font-size: 28px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    z-index: 1000;
+    transform-origin: 50% 50%;
+    transform: translate3d(-50%, -50%, 0) rotate(45deg) scale(2);
+}
+
+.diamonds .diamond:hover:after {
+    opacity: 0.3;
+    transform: scale(1);
+}
+
+.diamonds .diamond:hover:before {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0) rotate(45deg) scale(1);
+}
+
+.diamonds .content {
+    display: table-cell;
+    height: 255px;
+    padding: 0 8px 0 6px;
+    transform: rotate(45deg);
+    text-align: center;
+    vertical-align: middle;
+    width: 255px;
+    position: relative;
+}
+
+.diamonds .content img {
+    max-width: 375px;
+    margin-left: -50%;
+}
+
+.diamonds .diamond-sm {
+    height: 123px;
+    width: 123px;
+}
+
+.diamonds .diamond-sm .content {
+    height: 123px;
+    width: 123px;
+}
+
+.diamonds .diamond-sm .content:after {
+    left: 24%;
+    top: 48%;
+}
+
+@media (min-width: 1199px) {
+    .diamonds > li:nth-child(3) {
+            margin-right: 0;
+    }
+    .diamonds > li:nth-child(4) {
+            right: 143px;
+            top: 9px;
+            position: absolute;
+    }
+    .diamonds > li:nth-child(5) {
+            margin-left: 516px;
+            margin-top: -70px;
+    }
+    .diamonds > li:nth-child(6) {
+            position: absolute;
+            margin: -8px 0 0 -27px;
+            right: -14px;
+    }
+    .diamonds > li:nth-child(7) {
+            position: absolute;
+            margin: 93px 0 0 -133px;
+            right: 90px;
+    }
+    .diamonds .diamond-sm {
+            height: 123px;
+            width: 123px;
+    }
+    .diamonds .diamond-sm .content {
+            height: 123px;
+            width: 123px;
+    }
+    .diamonds .diamond-sm .content img {
+            max-width: 195px;
+    }
+}
+
+@media (max-width: 1198px) {
+    .diamonds {
+            text-align: center;
+            width: 748px;
+            margin: 0 auto;
+            padding: 75px 0 0 75px;
+    }
+    .diamonds::after {
+            clear: both;
+            content: "";
+            display: block;
+    }
+    .diamonds > li {
+            margin: 0;
+            position: static;
+            float: left;
+    }
+    .diamonds > li:nth-child(2n+2) {
+            margin-bottom: -50px;
+            margin-left: 55px;
+            margin-top: 200px;
+    }
+    .diamonds > li:nth-child(2n+1) {
+            clear: both;
+    }
+    .diamonds > li:nth-child(4) {
+            float: left;
+    }
+    .diamonds > li:nth-child(5), .diamonds > li:nth-child(6), .diamonds > li:nth-child(7) {
+            float: right;
+    }
+    .diamonds > li:nth-child(7) {
+            margin-top: 40px;
+    }
+}
+
+@media (max-width: 748px) {
+    .diamonds {
+            margin: 0 auto;
+            padding: 25px 0 0 0;
+            text-align: center;
+            width: 445px;
+    }
+    .diamonds > li {
+            float: none !important;
+            clear: both !important;
+            margin: 45px 0 115px 95px !important;
+            display: block;
+    }
+    .diamonds > li:nth-child(4), .diamonds > li:nth-child(6), .diamonds > li:nth-child(7) {
+            margin-left: 158px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .diamonds-wrapper {
+            min-height: 2290px;
+    }
+    .diamonds-wrapper .diamonds {
+            margin: 0 auto;
+            padding: 25px 0 0;
+            text-align: center;
+            width: 445px;
+            position: absolute;
+            left: 50%;
+            margin-left: -222px;
+    }
+    .diamonds-wrapper .diamonds .diamond {
+            margin: 130px auto 0;
+    }
+    .diamonds-wrapper .diamonds > li {
+            text-align: center;
+            margin: 0 !important;
+    }
+    .diamonds-wrapper .diamonds > li:first-child .diamond {
+            margin-top: 60px;
+    }
+}
