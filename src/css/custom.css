@@ -5,6 +5,34 @@
     line-height: 0.8;
 }
 
+/*
+* Diamonds SVG Line
+*/
+@-webkit-keyframes customDiamondsLineAnim {
+		from {
+				stroke-dasharray: 1330;
+				stroke-dashoffset: 0;
+		}
+		to {
+				stroke-dasharray: 1330;
+				stroke-dashoffset: -1300;
+		}
+}
+@keyframes customDiamondsLineAnim {
+		from {
+				stroke-dasharray: 1330;
+				stroke-dashoffset: 0;
+		}
+		to {
+				stroke-dasharray: 1330;
+				stroke-dashoffset: -1300;
+		}
+}
+
+.customDiamondsLineAnim {
+		-webkit-animation-name: customDiamondsLineAnim;
+						animation-name: customDiamondsLineAnim;
+}
 
 /*
 * Diamonds
